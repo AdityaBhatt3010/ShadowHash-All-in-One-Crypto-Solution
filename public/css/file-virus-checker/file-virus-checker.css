@@ -1,0 +1,257 @@
+.file-virus-checker-page.root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 42px 0;
+  background-color: #010619;
+  overflow: hidden;
+}
+.file-virus-checker-page .header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: var(--src) center center/100% 100% no-repeat;
+  border-color: white;
+  border-style: solid;
+  border-width: 0 0 3px;
+  overflow: hidden;
+}
+.file-virus-checker-page .flex_row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0 10px;
+  margin: 13px 0;
+}
+.file-virus-checker-page .wrapper6 {
+  display: flex;
+  align-items: center;
+  width: 453px;
+  min-width: 0;
+  padding: 0 0 0 20px;
+}
+.file-virus-checker-page .image7 {
+  width: 100px;
+  height: 88px;
+}
+.file-virus-checker-page .hero_title1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px 0 14px;
+  width: 333px;
+  height: 59px;
+  font: 400 46px/1.28 Audiowide, Helvetica, Arial, serif;
+  color: #33ff00;
+  text-align: center;
+}
+.file-virus-checker-page .wrapper7 {
+  display: flex;
+  width: 60px;
+  min-width: 0;
+  padding: 0 20px 0 0;
+}
+.file-virus-checker-page .wrapper71 {
+  width: 40px;
+  height: 40px;
+}
+.file-virus-checker-page .hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px 0;
+  margin: 0 0 164px;
+  width: 80%;
+}
+.file-virus-checker-page .main-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font: 700 80px/1.55 BioRhyme, Helvetica, Arial, serif;
+  color: white;
+  text-align: center;
+  letter-spacing: -0.1px;
+}
+@media (max-width: 1399px) {
+  .file-virus-checker-page .main-heading {
+    font-size: 70px;
+  }
+}
+@media (max-width: 991px) {
+  .file-virus-checker-page .main-heading {
+    font-size: 60px;
+  }
+}
+@media (max-width: 767px) {
+  .file-virus-checker-page .main-heading {
+    font-size: 35px;
+  }
+}
+@media (max-width: 575px) {
+  .file-virus-checker-page .main-heading {
+    font-size: 30px;
+  }
+}
+@media (max-width: 479px) {
+  .file-virus-checker-page .main-heading {
+    font-size: 23px;
+  }
+}
+@media (max-width: 383px) {
+  .file-virus-checker-page .main-heading {
+    font-size: 20px;
+  }
+}
+.file-virus-checker-page .main-section {
+  display: flex;
+  flex-direction: column;
+  place-content: center center;
+  align-items: center;
+  gap: 20px 0;
+  width: 60%;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.file-virus-checker-page .file-upload-area {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #333333;
+  border-radius: 4px;
+  outline: 1px dashed rgba(56, 78, 183, 0.298);
+  outline-offset: -1px;
+}
+.file-virus-checker-page .file-upload {
+  display: flex;
+  flex-direction: column;
+  place-content: center center;
+  align-items: center;
+  gap: 26px 0;
+  margin: 145px auto 173px;
+  width: 100%;
+}
+@media (max-width: 991px) {
+  .file-virus-checker-page .file-upload {
+    margin: 130px auto 150px;
+  }
+}
+@media (max-width: 575px) {
+  .file-virus-checker-page .file-upload {
+    margin: 120px auto 130px;
+  }
+}
+@media (max-width: 479px) {
+  .file-virus-checker-page .file-upload {
+    margin: 100px auto;
+  }
+}
+@media (max-width: 383px) {
+  .file-virus-checker-page .file-upload {
+    margin: 80px auto;
+  }
+}
+.file-virus-checker-page .image {
+  width: 68px;
+  height: 59px;
+}
+.file-virus-checker-page .wrapper3_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.file-virus-checker-page .wrapper3 {
+  font: 700 16px/1.5 Mulish, Helvetica, Arial, serif;
+  color: black;
+  text-align: center;
+}
+.file-virus-checker-page .wrapper3_span0 {
+  font: 700 1em/1.5 Mulish, Helvetica, Arial, serif;
+  color: white;
+}
+.file-virus-checker-page .wrapper3_span1 {
+  font: 700 1em/1.5 Mulish, Helvetica, Arial, serif;
+  color: #333333;
+}
+.file-virus-checker-page .wrapper3_span2 {
+  font: 700 1em/1.5 Mulish, Helvetica, Arial, serif;
+  color: white;
+  text-decoration: underline;
+}
+.file-virus-checker-page .wrapper3_span2:hover{
+  color: #33ff00;
+  cursor: pointer;
+}
+.file-virus-checker-page .upload-button {
+  display: flex;
+  place-content: center center;
+  align-items: center;
+  width: 80%;
+  background-color: #33ff00;
+  border-radius: 10px;
+  padding: 15px 14px;
+}
+.file-virus-checker-page .subtitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 118px;
+  height: 18px;
+  font: 700 20px/0.9 Mulish, Helvetica, Arial, serif;
+  color: black;
+  text-align: center;
+}
+@media (max-width: 991px) {
+  .file-virus-checker-page .subtitle {
+    font-size: 15px;
+  }
+}
+.file-virus-checker-page .subtitle:hover{
+  cursor: pointer; color: blue; text-decoration: underline;
+}
+.output-box {
+  margin: 0 0 10px;
+  align-self: center;
+  min-width: 80%;
+  width: fit-content;
+  height: 190px;
+  background: linear-gradient(180deg, rgba(26, 46, 68, 0.7) 22%, rgba(0, 22.1, 88.39, 0.7) 100%);
+  border-radius: 40px;
+  text-align: center;
+  padding: 10px;
+}
+@media (max-width: 1399px) {
+  .file-virus-checker .output-box {
+    height: 180px;
+  }
+}
+@media (max-width: 1199px) {
+  .file-virus-checker .output-box {
+    height: 160px;
+  }
+}
+@media (max-width: 991px) {
+  .file-virus-checker .output-box {
+    height: 125px;
+  }
+}
+@media (max-width: 767px) {
+  .file-virus-checker .output-box {
+    height: 120px;
+  }
+}
+@media (max-width: 479px) {
+  .file-virus-checker .output-box {
+    height: 100px;
+  }
+}
+
+.result-text{
+  position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font: 400 60px/1 Inter, Helvetica, Arial, serif;
+    color: white;
+    text-align: center;
+    width: 100%;
+}
