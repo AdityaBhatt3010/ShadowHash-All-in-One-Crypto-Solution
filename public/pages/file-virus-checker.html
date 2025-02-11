@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <link rel="stylesheet" type="text/css" href="../css/file-virus-checker/common.css" />
+    <link rel="stylesheet" type="text/css" href="../css/file-virus-checker/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="../css/file-virus-checker/file-virus-checker.css" />
+
+</head>
+
+<body class="flex-column">
+
+    <div class="file-virus-checker-page root">
+        <div class="header" style="--src:url(../assets/aefb28f8c7ca45585b5d4e932d505aa7.svg)">
+            <div class="flex_row">
+                <div class="wrapper6">
+                    <img class="image7" src="../assets/file-virus-checker/4a2d56991756ed2a0afe1ab081e2b8ab.png" alt="alt text" />
+                    <h1 class="hero_title1">ShadowHash</h1>
+                </div>
+                <div class="wrapper7">
+                    <img class="wrapper71" src="../assets/file-virus-checker/72ff17438e89bffea4ac7d7705a47841.svg" alt="alt text" />
+                </div>
+            </div>
+        </div>
+        <div class="hero-section">
+            <h1 class="main-heading">File Virus Checker</h1>
+            <div class="main-section">
+                <div class="file-upload-area">
+                    <div class="file-upload">
+                        <img class="image" src="../assets/file-virus-checker/d5b2e6fec33eab6a06746dcc4b8d0718.svg" alt="alt text" />
+                        <h5 class="wrapper3_box">
+                            <span class="wrapper3">
+                <span class="wrapper3_span0">Drag &amp; drop files or</span>
+                            <span class="wrapper3_span1"> </span>
+                            <span class="wrapper3_span2" id="browse-link">Browse</span>
+                            </span>
+                        </h5>
+                        <input type="file" id="file-input" style="display: none;" />
+                    </div>
+                </div>
+                <button class="upload-button">
+                    <h3 class="subtitle" id="upload-button">Upload Files</h3>
+                </button>
+                <div class="output-box">
+                    <h1 class="result-text" id="result"></h1>
+                </div>   
+            </div>
+             
+        </div>
+    </div>
+
+</body>
+
+<script>
+    document.getElementById('browse-link').addEventListener('click', function () {
+            document.getElementById('file-input').click();
+        });
+
+        document.getElementById('upload-button').addEventListener('click', async function () {
+            const fileInput = document.getElementById('file-input');
+            if (fileInput.files.length === 0) {
+                alert('No file selected.');
+                return;
+            }
+
+            const file = fileInput.files[0];
+            const formData = new FormData();
+            formData.append('file', file);
+
+            try {
+                const response = await fetch('/upload', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                const result = await response.text();
+                document.getElementById('result').textContent = result;
+            } catch (error) {
+                console.error('Error uploading file:', error);
+                document.getElementById('result').textContent = 'Error uploading file.';
+            }
+        });
+</script>
+    
+</html>

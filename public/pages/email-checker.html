@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <link rel="stylesheet" type="text/css" href="../css/breach-checker/common.css" />
+    <link rel="stylesheet" type="text/css" href="../css/breach-checker/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="../css/breach-checker/email-checker.css" />
+
+</head>
+
+<body class="flex-column">
+
+    <div class="breach-checker-page group">
+        <div class="root">
+            <div class="header">
+                <div class="flex_row">
+                    <div class="wrapper8">
+                        <img class="image3" src="../assets/breach-checker/4a2d56991756ed2a0afe1ab081e2b8ab.png" alt="alt text" />
+                        <h1 class="hero_title3">ShadowHash</h1>
+                    </div>
+                    <div class="wrapper9">
+                        <img class="wrapper91" src="../assets/breach-checker/72ff17438e89bffea4ac7d7705a47841.svg" alt="alt text" />
+                    </div>
+                </div>
+            </div>
+            <div class="hero-section">
+                <div class="flex_col">
+                    <h1 class="main-title">Breach Checker</h1>
+                    <div class="toggle-button">
+                        <div class="button-email">
+                            <h1 class="toggle-button-title-1">Email</h1>
+                        </div>
+                        <a href="./password-checker.html" style="text-decoration: none;"><h1 class="toggle-button-title-2">Password</h1></a>
+                    </div>
+                    <div class="input-field">
+                        <div class="wrapper4">
+                            <div class="wrapper5">
+                                <img class="image" src="../assets/breach-checker/5116851aef15d7b8da6008d88ab2b0b2.svg" alt="alt text" />
+                                <h5 class="highlight_box">
+                                    <input id="email" type="email" class="highlight" placeholder="enter your email address" required/>
+                                </h5>
+                            </div>
+                            <img class="image1" src="../assets/breach-checker/c4c8b35c0cbadaf2755701b2305ed552.svg" alt="alt text" />
+                        </div>
+                        <div class="placeholder"></div>
+                    </div>
+                    <button onclick="checkEmail()" class="submit-button">
+                        <h1 class="big_title">Submit</h1>
+                    </button>
+                    <div class="output-box">
+                        <div id="result" class="result-text">Is Your Email Safe?</div>
+                        <img src="../assets/breach-checker/90d57af3f8b2091c1d3880b01246824b.png" alt="alt text" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<script>
+    async function checkEmail() {
+            const email = document.getElementById('email').value;
+            const result = document.getElementById('result');
+
+            try {
+                const response = await fetch('/email/breach', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                    },
+                    body: new URLSearchParams({
+                        'email': email
+                    })
+                });
+
+                if (!response.ok) {
+                    throw new Error('Network response was not ok ' + response.statusText);
+                }
+
+                const data = await response.text();
+                result.textContent = data;
+            } catch (error) {
+                result.textContent = 'Error: ' + error.message;
+            }
+        }
+</script>
+
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <link rel="stylesheet" type="text/css" href="../css/hash-creator/SHA256.css" />
+    <link rel="stylesheet" type="text/css" href="../css/hash-creator/common.css" />
+    <link rel="stylesheet" type="text/css" href="../css/hash-creator/fonts.css" />
+
+</head>
+
+<body class="flex-column">
+
+    <div class="hash-creator-page root">
+        <div class="header">
+            <div class="wrapper4">
+                <img class="image2" src="../assets/hash-creator/4a2d56991756ed2a0afe1ab081e2b8ab.png" alt="alt text" />
+                <h1 class="hero_title4">ShadowHash</h1>
+            </div>
+            <div class="wrapper5">
+                <img class="wrapper51" src="../assets/hash-creator/72ff17438e89bffea4ac7d7705a47841.svg" alt="alt text" />
+            </div>
+        </div>
+        <div class="hero-section">
+            <h1 class="main-title">Hash Creator</h1>
+            <div class="main-content">
+                <div class="navbar">
+                    <div class="wrapper2">
+                        <a href="./MD5-creator.html" style="text-decoration: none;"><h1 class="hero_title2">MD5</h1></a>
+                    </div>
+                    <div class="wrapper1">
+                        <a href="./SHA1-creator.html" style="text-decoration: none;"><h1 class="hero_title1">SHA1</h1></a>
+                    </div>
+                    <div class="wrapper22">
+                        <a href="./SHA256-creator.html" style="text-decoration: none;"><h1 class="hero_title36">SHA256</h1></a>
+                    </div>
+                    <div class="wrapper11">
+                        <a href="./others-creator.html" style="text-decoration: none;"><h1 class="hero_title44">Others</h1></a>
+                    </div>
+                </div>
+                <div class="input-area">
+                    <h3 class="subtitle_box"><input id="input" type="text" class="subtitle" placeholder="Enter your message..." /></h3>
+                </div>
+                <button class="generate-button" id="generate-button" onclick="generator()">
+                    <h1 class="hero_title3">Generate Hash</h1>
+                </button>
+                <div class="output-box">
+                    <h1 class="result-text" id="result"></h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<script>
+
+    async function generator() {
+            const input = document.getElementById('input').value;
+
+            try {
+                const response = await fetch('/hash/sha256', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ input: input })
+                });
+
+                const data = await response.text();
+                document.getElementById('result').textContent = data;
+            } catch (error) {
+                document.getElementById('result').textContent = 'Error: ' + error.message;
+            }
+        }
+
+</script>
+
+</html>

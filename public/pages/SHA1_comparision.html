@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <link rel="stylesheet" type="text/css" href="../css/hash-comparision/common.css" />
+    <link rel="stylesheet" type="text/css" href="../css/hash-comparision/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="../css/hash-comparision/SHA1_comparision.css" />
+
+</head>
+
+<body class="flex-column">
+
+    <div class="md5-comparision root">
+        <div class="header">
+            <div class="flex_row">
+                <div class="wrapper8">
+                    <img class="image3" src="../assets/hash-comparision/4a2d56991756ed2a0afe1ab081e2b8ab.png" alt="alt text" />
+                    <h1 class="hero_title3">ShadowHash</h1>
+                </div>
+                <div class="wrapper9">
+                    <img class="wrapper91" src="../assets/hash-comparision/72ff17438e89bffea4ac7d7705a47841.svg" alt="alt text" />
+                </div>
+            </div>
+        </div>
+        <div class="hero-section">
+            <h1 class="main-title">Hash Comparison Checker</h1>
+            <div class="main-content">
+                <div class="navbar">
+                    <div class="wrapper2">
+                        <a href="./MD5_comparision.html" style="text-decoration: none;"><h1 class="hero_title2">MD5</h1></a>
+                    </div>
+                    <div class="wrapper1">
+                        <a href="./SHA1_comparision.html" style="text-decoration: none;"><h1 class="hero_title1">SHA1</h1></a>
+                    </div>
+                    <div class="wrapper22">
+                        <a href="./SHA256_comparison.html" style="text-decoration: none;"><h1 class="hero_title36">SHA256</h1></a>
+                    </div>
+                    <div class="wrapper11">
+                        <a href="" style="text-decoration: none;"><h1 class="hero_title44">Others</h1></a>
+                    </div>
+                </div>
+                <div class="input-area">
+                    <div class="wrapper6">
+                        <h3 class="subtitle_box"><input id="inputText" type="text" class="subtitle" placeholder="Enter your message..." required/></h3>
+                    </div>
+                </div>
+                <div class="input-area2">
+                    <div class="wrapper8">
+                        <h5 class="wrapper81_box"><input id="inputHash" type="text" class="wrapper81" placeholder="Enter your hash" required/></h5>
+                    </div>
+                </div>
+                <button id="compare-button" onclick="compareHash()" class="compare-button" style="cursor: pointer;">
+                    <h1 class="hero_title5">Compare</h1>
+                </button>
+                <div class="output-box">
+                    <h1 class="result-text" id="result"></h1>
+                </div> 
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<script>
+    async function compareHash() {
+            const inputText = document.getElementById('inputText').value;
+            const inputHash = document.getElementById('inputHash').value;
+            const result = document.getElementById('result');
+            if(inputText == null){
+                    alert('Please input message');
+             }
+
+            if(inputHash == null){
+                alert('Please input hash');
+             }
+
+            try {
+                const response = await fetch('/compare-hash/sha1', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        text: inputText,
+                        hash: inputHash
+                    })
+                });
+
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+
+                const data = await response.text();
+                result.textContent = data; // Update result message with response
+            } catch (error) {
+                console.error('Error comparing hashes:', error);
+                result.textContent = 'Error comparing hashes'; // Handle error case
+            }
+        }
+</script>
+
+</html>
