@@ -1,0 +1,14 @@
+:root {
+    --normal-font-font-family: "Averia Sans Libre", Helvetica;
+    --normal-font-font-weight: 400;
+    --normal-font-font-size: 20px;
+    --normal-font-letter-spacing: 0px;
+    --normal-font-line-height: normal;
+    --normal-font-font-style: normal;
+    --headings-font-family: "BioRhyme", Helvetica;
+    --headings-font-weight: 700;
+    --headings-font-size: 80px;
+    --headings-letter-spacing: 0px;
+    --headings-line-height: normal;
+    --headings-font-style: normal;
+}

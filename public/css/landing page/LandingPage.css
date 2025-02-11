@@ -1,0 +1,1317 @@
+@use "utils" as *;
+@use "global" as *;
+
+.landing-page {
+  &.main-section {
+    display: flex;
+    flex-direction: column;
+    place-content: center center;
+    align-items: start;
+    width: 100%;
+    background-color: rgb(1 6 25);
+    overflow: hidden;
+  }
+
+  .header {
+    display: flex;
+    place-content: flex-start space-between;
+    align-items: center;
+    gap: 0 8px;
+    width: 100%;
+    height: fit-content;
+    padding: 10px 0;
+  }
+
+  .flex-row-image-title {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    gap: 0 5px;
+    width: 20%;
+    min-width: 0;
+    opacity: 0.7;
+    transition-duration: 0.3s;
+    transition-property: opacity;
+  }
+
+  .flex-row-image-title:hover {
+    opacity: 1;
+  }
+
+  .hero-image {
+    width: 40%;
+    min-width: 0;
+    height: 100%;
+  }
+
+  .image-title {
+    display: flex;
+    align-items: center;
+    min-width: 0;
+    font: 400 25px/1.25 Audiowide, Helvetica, Arial, serif;
+    color: rgb(51 255 0);
+  }
+
+  .flex-row-benefits-services-resources {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 160px 0 0;
+    width: 373.34px;
+    min-width: 0;
+
+    @include mq-between(xxl, xxxl) {
+      width: 653.34px;
+    }
+
+    @include xl {
+      margin: 0 130px 0 0;
+    }
+  }
+
+  .benefits-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 0;
+    font: 400 20px/1.25 "Averia Sans Libre", Helvetica, Arial, serif;
+    color: rgb(51 255 0);
+    text-align: center;
+    opacity: 0.8;
+    transition-duration: 0.3s;
+    transition-property: opacity;
+  }
+
+  .benefits-title:hover {
+    opacity: 1;
+  }
+
+  .services-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 0;
+    font: 400 20px/1.25 "Averia Sans Libre", Helvetica, Arial, serif;
+    color: rgb(51 255 0);
+    text-align: center;
+    opacity: 0.8;
+    transition-duration: 0.3s;
+    transition-property: opacity;
+  }
+
+  .services-title:hover {
+    opacity: 1;
+  }
+
+  .resources-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 0;
+    font: 400 20px/1.25 "Averia Sans Libre", Helvetica, Arial, serif;
+    color: rgb(51 255 0);
+    text-align: center;
+    opacity: 0.8;
+    transition-duration: 0.3s;
+    transition-property: opacity;
+  }
+
+  .resources-title:hover {
+    opacity: 1;
+  }
+
+  .footer-image {
+    width: 5%;
+    min-width: 0;
+    height: 40px;
+    cursor: pointer;
+    opacity: 0.6;
+    transition-duration: 0.3s;
+    transition-property: opacity;
+  }
+
+  .footer-image:hover {
+    opacity: 1;
+  }
+
+  .group-title-and-about {
+    position: relative;
+    width: 100%;
+    min-height: 670px;
+    background: url(./f4c569097d26f3939d3d1a06aec46e57.png) center center / 100% 100% no-repeat;
+    border-color: rgb(255 255 255);
+    border-style: solid;
+    border-width: 3px 0;
+  }
+
+  .flex-column-title {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    place-content: center center;
+    align-items: center;
+    gap: 90px 0;
+    width: 70.33%;
+    height: fit-content;
+    padding: 30px 0 0 20px;
+  }
+
+  .hero-title_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0 0;
+    width: 100%;
+  }
+
+  .hero-title {
+    font: 700 100px/1.55 BioRhyme, Helvetica, Arial, serif;
+    color: rgb(255 255 255);
+    text-align: center;
+  }
+
+  .hero-title_span0 {
+    font: 700 1em/1.55 BioRhyme, Helvetica, Arial, serif;
+  }
+
+  .hero-title_span1 {
+    font: 700 0.7em/1.54 BioRhyme, Helvetica, Arial, serif;
+  }
+
+  .flex_row {
+    display: flex;
+    justify-content: space-between;
+    gap: 0 10px;
+    width: 70.73%;
+  }
+
+  .about-us {
+    display: flex;
+    flex-direction: column;
+    width: 207px;
+    min-width: 0;
+    background-color: rgb(5 73 143);
+    border-radius: 46px;
+    opacity: 0.9;
+    transition-duration: 0.3s;
+    transition-property: opacity;
+  }
+
+  .about-us:hover {
+    opacity: 1;
+    cursor: pointer;
+  }
+
+  .about-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 70px 31px;
+    width: 67px;
+    height: 31px;
+    font: 700 25px/1.24 "Averia Sans Libre", Helvetica, Arial, serif;
+    color: rgb(255 255 255);
+    text-align: center;
+  }
+
+  .terms-of-use {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    min-width: 0;
+    opacity: 0.9;
+    transition-duration: 0.3s;
+    transition-property: opacity;
+  }
+
+  .terms-of-use:hover {
+    opacity: 1;
+    cursor: pointer;
+  }
+
+  .cover-terms-image {
+    position: relative;
+    width: 100%;
+    border-radius: 45.78px;
+  }
+
+  .terms-title {
+    position: absolute;
+    top: 29px;
+    left: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 147px;
+    height: 31px;
+    font: 700 25px/1.24 "Averia Sans Libre", Helvetica, Arial, serif;
+    color: rgb(255 255 255);
+    text-align: center;
+  }
+
+  .group-benefits {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 22px 0 0;
+    width: 100%;
+    background: url(./e863f70d5e4e1aead070e5b06e694ab4.png) center center / 84.76% 100% no-repeat;
+    border-color: rgb(255 255 255);
+    border-style: solid;
+    border-width: 0 0 3px;
+  }
+
+  .flex-column-benefits {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 30px 35px 88px;
+  }
+
+  .benefits-overview-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 874px 0 145px;
+    width: 351px;
+    height: 124px;
+    font: 700 80px/1.55 BioRhyme, Helvetica, Arial, serif;
+    color: rgb(255 255 255);
+    text-align: center;
+  }
+
+  .flex-row-benefits-details {
+    display: flex;
+    justify-content: space-between;
+    gap: 0 10px;
+    margin: 49px 0 0;
+    width: 100%;
+    height: 643px;
+  }
+
+  .flex-column-breach-monitoring {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 59px 0;
+    margin: 6px 0 79px;
+    width: 370px;
+    height: 558px;
+    transition-duration: 0.3s;
+    transition-property: transform;
+  }
+
+  .flex-column-breach-monitoring:hover {
+    transform: scale(1.1);
+  }
+
+  .breach-monitoring-image {
+    margin: 0 77px 0 78px;
+    width: 215px;
+    height: 178px;
+    outline: 1px solid rgb(255 255 255);
+    outline-offset: -1px;
+  }
+
+  .breach-monitoring-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 8px 0 9px;
+    width: 353px;
+    height: 37px;
+    font: 700 30px/1.23 "Averia Sans Libre", Helvetica, Arial, serif;
+    color: rgb(255 255 255);
+    text-align: center;
+
+    @include xl {
+      font-size: 25px;
+    }
+  }
+
+  .breach-monitoring-description {
+    display: flex;
+    align-items: center;
+    width: 370px;
+    height: 224px;
+    font: 700 23px/1.21 "Averia Sans Libre", Helvetica, Arial, serif;
+    color: rgb(255 255 255);
+    text-align: justify;
+  }
+
+  .flex-column-unbreakable-passwords {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 59px 0;
+    margin: 0 0 29px;
+    width: 370px;
+    height: 614px;
+    transition-duration: 0.3s;
+    transition-property: transform;
+  }
+
+  .flex-column-unbreakable-passwords:hover {
+    transform: scale(1.1);
+  }
+
+  .unbreakable-password-image {
+    margin: 0 77px 0 78px;
+    width: 215px;
+    height: 178px;
+    outline: 1px solid rgb(255 255 255);
+    outline-offset: -1px;
+  }
+
+  .unbreakable-password-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 8px 0 9px;
+    width: 353px;
+    height: 37px;
+    font: 700 30px/1.23 "Averia Sans Libre", Helvetica, Arial, serif;
+    color: rgb(255 255 255);
+    text-align: center;
+  }
+
+  .unbreakable-password-description {
+    display: flex;
+    align-items: center;
+    width: 370px;
+    height: 280px;
+    font: 700 23px/1.21 "Averia Sans Libre", Helvetica, Arial, serif;
+    color: rgb(255 255 255);
+    text-align: justify;
+  }
+
+  .flex-column-ironclad-encryption {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 59px 0;
+    margin: 1px 0 0;
+    width: 370px;
+    height: 642px;
+    transition-duration: 0.3s;
+    transition-property: transform;
+  }
+
+  .flex-column-ironclad-encryption:hover {
+    transform: scale(1.1);
+  }
+
+  .ironclad-encryption-image {
+    margin: 0 77px 0 78px;
+    width: 215px;
+    height: 178px;
+    outline: 1px solid rgb(255 255 255);
+    outline-offset: -1px;
+  }
+
+  .ironclad-encryption-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 8px 0 9px;
+    width: 353px;
+    height: 37px;
+    font: 700 30px/1.23 "Averia Sans Libre", Helvetica, Arial, serif;
+    color: rgb(255 255 255);
+    text-align: center;
+  }
+
+  .ironclad-encryption-description {
+    display: flex;
+    align-items: center;
+    width: 370px;
+    height: 308px;
+    font: 700 23px/1.21 "Averia Sans Libre", Helvetica, Arial, serif;
+    color: rgb(255 255 255);
+    text-align: justify;
+  }
+
+  .flex-row-other-benefits {
+    display: flex;
+    justify-content: space-between;
+    gap: 0 10px;
+    margin: 118px 0 0;
+    width: 100%;
+    height: 559px;
+  }
+
+  .flex-column-verification-easy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 59px 0;
+    margin: 1px 0 0;
+    width: 370px;
+    height: 558px;
+    transition-duration: 0.3s;
+    transition-property: transform;
+  }
+
+  .flex-column-verification-easy:hover {
+    transform: scale(1.1);
+  }
+
+  .verification-image {
+    margin: 0 77px 0 78px;
+    width: 215px;
+    height: 178px;
+    outline: 1px solid rgb(255 255 255);
+    outline-offset: -1px;
+  }
+
+  .verification-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 8px 0 9px;
+    width: 353px;
+    height: 37px;
+    font: 700 30px/1.23 "Averia Sans Libre", Helvetica, Arial, serif;
+    color: rgb(255 255 255);
+    text-align: center;
+  }
+
+  .verification-description {
+    display: flex;
+    align-items: center;
+    width: 370px;
+    height: 224px;
+    font: 700 23px/1.21 "Averia Sans Libre", Helvetica, Arial, serif;
+    color: rgb(255 255 255);
+    text-align: justify;
+  }
+
+  .flex-column-organize-securely {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 0 71px;
+    width: 370px;
+    height: 488px;
+    transition-duration: 0.3s;
+    transition-property: transform;
+  }
+
+  .flex-column-organize-securely:hover {
+    transform: scale(1.1);
+  }
+
+  .organize-securely-image {
+    margin: 0 77px 0 78px;
+    width: 215px;
+    height: 178px;
+    outline: 1px solid rgb(255 255 255);
+    outline-offset: -1px;
+  }
+
+  .organize-securely-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 59.5px 8px 0 9px;
+    width: 353px;
+    height: 37px;
+    font: 700 30px/1.23 "Averia Sans Libre", Helvetica, Arial, serif;
+    color: rgb(255 255 255);
+    text-align: center;
+  }
+
+  .organize-securely-description {
+    display: flex;
+    align-items: center;
+    margin: 73.5px 0 0;
+    width: 370px;
+    height: 140px;
+    font: 700 23px/1.21 "Averia Sans Libre", Helvetica, Arial, serif;
+    color: rgb(255 255 255);
+    text-align: justify;
+  }
+
+  .flex-column-virus-protection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 59px 0;
+    margin: 1px 0 56px;
+    width: 370px;
+    height: 502px;
+    transition-duration: 0.3s;
+    transition-property: transform;
+  }
+
+  .flex-column-virus-protection:hover {
+    transform: scale(1.1);
+  }
+
+  .virus-protection-image {
+    margin: 0 77px 0 78px;
+    width: 215px;
+    height: 178px;
+    outline: 1px solid rgb(255 255 255);
+    outline-offset: -1px;
+  }
+
+  .virus-protection-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 8px 0 9px;
+    width: 353px;
+    height: 37px;
+    font: 700 30px/1.23 "Averia Sans Libre", Helvetica, Arial, serif;
+    color: rgb(255 255 255);
+    text-align: center;
+  }
+
+  .virus-protection-description {
+    display: flex;
+    align-items: center;
+    width: 370px;
+    height: 168px;
+    font: 700 23px/1.21 "Averia Sans Libre", Helvetica, Arial, serif;
+    color: rgb(255 255 255);
+    text-align: justify;
+  }
+
+  .group-services {
+    position: relative;
+    margin: 45px 0 0;
+    width: 100%;
+    min-height: 879px;
+    border-color: rgb(255 255 255);
+    border-style: solid;
+    border-width: 0 0 3px;
+  }
+
+  .flex_col {
+    position: absolute;
+    top: 136px;
+    display: flex;
+    flex-direction: column;
+    place-content: center center;
+    align-items: center;
+    gap: 20px 0;
+    width: 100%;
+    height: 696px;
+  }
+
+  .flex-row-services-grid {
+    display: flex;
+    place-content: center center;
+    align-items: center;
+    gap: 0 20px;
+    width: 100%;
+    height: fit-content;
+    padding: 0 25px;
+  }
+
+  .group-encryption-services {
+    display: flex;
+    width: 320px;
+    min-width: 0;
+    height: 100%;
+    min-height: 340px;
+    background-color: rgb(26 46 68);
+    border-radius: 10px;
+    transition-duration: 0.3s;
+    transition-property: transform;
+  }
+
+  .group-encryption-services:hover {
+    transform: scale(0.9);
+  }
+
+  .flex-column-breach-checker-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px 0;
+    margin: 25px 31px 21.5px;
+    width: 258px;
+    min-width: 0;
+  }
+
+  .breach-checker-image {
+    width: 100%;
+    height: 79.73%;
+    padding: 10px;
+  }
+
+  .breach-checker-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font: 700 35px/1.22 "Averia Sans Libre", Helvetica, Arial, serif;
+    color: rgb(255 255 255);
+    text-align: center;
+  }
+
+  .group-password-generator {
+    display: flex;
+    width: 320px;
+    min-width: 0;
+    min-height: 340px;
+    background-color: rgb(26 46 68);
+    border-radius: 10px;
+    transition-duration: 0.3s;
+    transition-property: transform;
+  }
+
+  .group-password-generator:hover {
+    transform: scale(0.9);
+  }
+
+  .flex-column-password-strength-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px 0;
+    margin: 1px 6px 6px 7px;
+    width: 307px;
+    min-width: 0;
+  }
+
+  .password-strength-image {
+    width: 84.04%;
+  }
+
+  .password-strength-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font: 700 30px/1.23 "Averia Sans Libre", Helvetica, Arial, serif;
+    color: rgb(255 255 255);
+    text-align: center;
+  }
+
+  .flex-column-password-generator-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 22px 0;
+    margin: 22px 23.5px 24.5px;
+    width: 273px;
+    min-width: 0;
+  }
+
+  .password-generator-image {
+    width: 94.51%;
+  }
+
+  .password-generator-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font: 700 30px/1.23 "Averia Sans Libre", Helvetica, Arial, serif;
+    color: rgb(255 255 255);
+    text-align: center;
+  }
+
+  .group-encryption-services1 {
+    display: flex;
+    width: 320px;
+    min-width: 0;
+    min-height: 340px;
+    background-color: rgb(26 46 68);
+    border-radius: 10px;
+    transition-duration: 0.3s;
+    transition-property: transform;
+  }
+
+  .group-encryption-services1:hover {
+    transform: scale(0.9);
+  }
+
+  .flex-column-encryption-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 19px 0;
+    margin: 22px 31px 21.5px;
+    width: 258px;
+    min-width: 0;
+  }
+
+  .encryption-image {
+    width: 100%;
+  }
+
+  .encryption-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font: 700 35px/1.22 "Averia Sans Libre", Helvetica, Arial, serif;
+    color: rgb(255 255 255);
+    text-align: center;
+  }
+
+  .flex-row-decryption-services {
+    display: flex;
+    place-content: center center;
+    align-items: center;
+    gap: 0 20px;
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .group-hash-creator {
+    display: flex;
+    width: 320px;
+    min-width: 0;
+    min-height: 336px;
+    background-color: rgb(26 46 68);
+    border-radius: 10px;
+    transition-duration: 0.3s;
+    transition-property: transform;
+  }
+
+  .group-hash-creator:hover {
+    transform: scale(0.9);
+  }
+
+  .flex-column-decryption-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 19px 0;
+    margin: 22px 31px 17.5px;
+    width: 258px;
+    min-width: 0;
+  }
+
+  .decryption-image {
+    width: 100%;
+  }
+
+  .decryption-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font: 700 35px/1.22 "Averia Sans Libre", Helvetica, Arial, serif;
+    color: rgb(255 255 255);
+    text-align: center;
+  }
+
+  .flex-column-hash-creator-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 19px 0;
+    margin: 22px 31px 17.5px;
+    width: 258px;
+    min-width: 0;
+  }
+
+  .hash-creator-image {
+    width: 100%;
+  }
+
+  .hash-creator-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font: 700 35px/1.22 "Averia Sans Libre", Helvetica, Arial, serif;
+    color: rgb(255 255 255);
+    text-align: center;
+  }
+
+  .group-hash-comparison {
+    display: flex;
+    width: 320px;
+    min-width: 0;
+    min-height: 336px;
+    background-color: rgb(26 46 68);
+    border-radius: 10px;
+    transition-duration: 0.3s;
+    transition-property: transform;
+  }
+
+  .group-hash-comparison:hover {
+    transform: scale(0.9);
+  }
+
+  .flex-column-hash-comparison-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px 0;
+    margin: 1px 18px 2px;
+    width: 284px;
+    min-width: 0;
+  }
+
+  .hash-comparison-image {
+    width: 90.85%;
+  }
+
+  .hash-comparison-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font: 700 30px/1.23 "Averia Sans Libre", Helvetica, Arial, serif;
+    color: rgb(255 255 255);
+    text-align: center;
+  }
+
+  .group-file-virus-checker {
+    display: flex;
+    width: 320px;
+    min-width: 0;
+    min-height: 336px;
+    background-color: rgb(26 46 68);
+    border-radius: 10px;
+    transition-duration: 0.3s;
+    transition-property: transform;
+  }
+
+  .group-file-virus-checker:hover {
+    transform: scale(0.9);
+  }
+
+  .flex-column-file-virus-checker-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 19px 0;
+    margin: 32px 17px 27.5px;
+    width: 286px;
+    min-width: 0;
+  }
+
+  .file-virus-checker-image {
+    width: 87.41%;
+  }
+
+  .file-virus-checker-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font: 700 35px/1.22 "Averia Sans Libre", Helvetica, Arial, serif;
+    color: rgb(255 255 255);
+    text-align: center;
+  }
+
+  .services-title1 {
+    position: absolute;
+    top: -12px;
+    left: 149px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 355px;
+    height: 124px;
+    font: 700 80px/1.55 BioRhyme, Helvetica, Arial, serif;
+    color: rgb(255 255 255);
+    text-align: center;
+  }
+
+  .group-resources {
+    position: relative;
+    margin: 27px 0 0;
+    width: 99.93%;
+    min-height: 1968px;
+  }
+
+  .rect-resource-box {
+    position: absolute;
+    top: -74px;
+    left: 0;
+    width: 100%;
+    height: 2042px;
+    background-color: rgb(217 217 217 / 0%);
+    border-color: rgb(255 255 255);
+    border-style: solid;
+    border-width: 0 0 3px;
+  }
+
+  .flex-column-resource-titles {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 41px 0;
+    width: 100%;
+    height: 1897px;
+  }
+
+  .resources-title1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 0 10.49%;
+    width: 424px;
+    font: 700 80px/1.55 BioRhyme, Helvetica, Arial, serif;
+    color: rgb(255 255 255);
+    text-align: center;
+  }
+
+  .flex-row-resource-grid {
+    display: flex;
+    place-content: center center;
+    align-items: center;
+    gap: 0 20px;
+    width: 100%;
+  }
+
+  .group-guides {
+    position: relative;
+    margin: 0 0 2px;
+    width: 470px;
+    min-width: 0;
+    min-height: 1730px;
+    background-color: rgb(26 46 68 / 80%);
+    border-radius: 15px;
+  }
+
+  .flex-column-guide-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    width: 470px;
+    height: 1730px;
+    opacity: 0.6;
+    transition-duration: 0.3s;
+    transition-property: opacity;
+  }
+
+  .flex-column-guide-title:hover {
+    opacity: 1;
+  }
+
+  .guide-image {
+    width: 100%;
+  }
+
+  .guide-big-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 127px 0 0 10px;
+    width: 106px;
+    font: 700 35px/1.22 "Averia Sans Libre", Helvetica, Arial, serif;
+    color: rgb(255 255 255);
+    text-align: center;
+  }
+
+  .guide-subtitle {
+    display: flex;
+    align-items: center;
+    margin: 184px 3px 0 10px;
+    font: 700 45px/1.24 "Averia Sans Libre", Helvetica, Arial, serif;
+    color: rgb(255 255 255);
+  }
+
+  .guide-overview {
+    display: flex;
+    align-items: center;
+    margin: 184px 3px 0 10px;
+    font: 700 35px/1.22 "Averia Sans Libre", Helvetica, Arial, serif;
+    color: rgb(255 255 255);
+  }
+
+  .guide-wrapper-image {
+    margin: 357px 0 0 10px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition-duration: 0.3s;
+    transition-property: transform;
+  }
+
+  .guide-wrapper-image:hover {
+    transform: translateX(8px);
+  }
+
+  .group-hash-functions {
+    position: relative;
+    width: 470px;
+    min-width: 0;
+    min-height: 1732px;
+    background-color: rgb(26 46 68 / 69.8%);
+    border-radius: 15px;
+  }
+
+  .flex-column-hash-functions-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    width: 470px;
+    height: 1732px;
+    opacity: 0.6;
+    transition-duration: 0.3s;
+    transition-property: opacity;
+  }
+
+  .flex-column-hash-functions-title:hover {
+    opacity: 1;
+  }
+
+  .hash-function-image {
+    width: 100%;
+  }
+
+  .hash-function-big-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 72px 0 0 10px;
+    width: 106px;
+    font: 700 35px/1.22 "Averia Sans Libre", Helvetica, Arial, serif;
+    color: rgb(255 255 255);
+    text-align: center;
+  }
+
+  .hash-function-subtitle {
+    display: flex;
+    align-items: center;
+    margin: 110px 3px 0 10px;
+    font: 700 45px/1.24 "Averia Sans Libre", Helvetica, Arial, serif;
+    color: rgb(255 255 255);
+  }
+
+  .hash-function-overview {
+    display: flex;
+    align-items: center;
+    margin: 111.5px 3px 0 10px;
+    font: 700 35px/1.22 "Averia Sans Libre", Helvetica, Arial, serif;
+    color: rgb(255 255 255);
+  }
+
+  .hash-function-wrapper-image {
+    margin: 302.5px 0 0 10px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition-duration: 0.3s;
+    transition-property: transform;
+  }
+
+  .hash-function-wrapper-image:hover {
+    transform: translateX(8px);
+  }
+
+  .group-blogs {
+    position: relative;
+    margin: 0 0 3px;
+    width: 460px;
+    min-width: 0;
+    min-height: 1729px;
+    background-color: rgb(26 46 68 / 80%);
+    border-radius: 15px;
+  }
+
+  .flex-column-blog-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    width: 460px;
+    height: 1729px;
+    opacity: 0.6;
+    transition-duration: 0.3s;
+    transition-property: opacity;
+  }
+
+  .flex-column-blog-title:hover {
+    opacity: 1;
+  }
+
+  .blog-image {
+    width: 100%;
+  }
+
+  .blog-big-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 81px 0 0 10px;
+    width: 71px;
+    font: 700 35px/1.22 "Averia Sans Libre", Helvetica, Arial, serif;
+    color: rgb(255 255 255);
+    text-align: center;
+  }
+
+  .blog-subtitle {
+    display: flex;
+    align-items: center;
+    margin: 150px 0 0 10px;
+    font: 700 45px/1.24 "Averia Sans Libre", Helvetica, Arial, serif;
+    color: rgb(255 255 255);
+  }
+
+  .blog-overview {
+    display: flex;
+    align-items: center;
+    margin: 150px 0 0 10px;
+    font: 700 35px/1.22 "Averia Sans Libre", Helvetica, Arial, serif;
+    color: rgb(255 255 255);
+  }
+
+  .blog-wrapper-image {
+    margin: 311px 0 0;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition-duration: 0.3s;
+    transition-property: transform;
+  }
+
+  .blog-wrapper-image:hover {
+    transform: translateX(8px);
+  }
+
+  .group-shadowhash {
+    position: relative;
+    margin: 0 0 5px;
+    width: 100%;
+    min-height: 259px;
+    background-color: rgb(0 22 88 / 69.8%);
+    border-color: rgb(255 255 255);
+    border-style: solid;
+    border-width: 3px 0;
+  }
+
+  .flex-row-brand-contact {
+    position: absolute;
+    top: 25px;
+    left: 0;
+    display: flex;
+    place-content: center space-between;
+    align-items: center;
+    gap: 0 10px;
+    width: 100%;
+    height: 177px;
+  }
+
+  .flex-column-brand-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px 0;
+    width: 35%;
+    padding: 0 0 0 15px;
+  }
+
+  .flex-row-brand-logo {
+    display: flex;
+    width: fit-content;
+    padding: 0 70px 0 0;
+    opacity: 0.6;
+    transition-duration: 0.3s;
+    transition-property: opacity;
+  }
+
+  .flex-row-brand-logo:hover {
+    opacity: 1;
+  }
+
+  .shadowhash-logo-image {
+    width: 100px;
+    min-width: 0;
+    height: 102px;
+  }
+
+  .shadowhash-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 16px 0 27px;
+    min-width: 0;
+    font: 400 46px/1.28 Audiowide, Helvetica, Arial, serif;
+    color: rgb(51 255 0);
+    text-align: center;
+  }
+
+  .flex-row-brand-contact-info {
+    display: flex;
+    gap: 0 40px;
+    width: fit-content;
+    padding: 0 40px 0 0;
+    cursor: pointer;
+    opacity: 0.8;
+    transition-duration: 0.3s;
+    transition-property: opacity;
+  }
+
+  .flex-row-brand-contact-info:hover {
+    opacity: 1;
+  }
+
+  .contact-info-image {
+    margin: 0 0 6px;
+    width: 50px;
+    min-width: 0;
+    height: 50px;
+  }
+
+  .contact-address {
+    display: flex;
+    align-items: center;
+    margin: 4px 0 0;
+    width: 324px;
+    min-width: 0;
+    font: 700 21px/1.23 "Averia Sans Libre", Helvetica, Arial, serif;
+    color: rgb(255 255 255);
+  }
+
+  .flex_row1 {
+    display: flex;
+    justify-content: flex-end;
+    align-items: start;
+    gap: 0 20px;
+    width: 30%;
+    padding: 0 25px 0 0;
+  }
+
+  .image9 {
+    width: 100px;
+    min-width: 0;
+    height: 100px;
+  }
+
+  .flex-column-contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px 0;
+    width: 272px;
+    min-width: 0;
+    padding: 16px 0 0;
+  }
+
+  .contact-us-title {
+    display: flex;
+    align-items: center;
+    font: 400 20px/1.25 "Averia Sans Libre", Helvetica, Arial, serif;
+    color: rgb(255 255 255);
+  }
+
+  .contact-email {
+    display: flex;
+    align-items: center;
+    font: 400 20px/1.25 "Averia Sans Libre", Helvetica, Arial, serif;
+    color: rgb(255 255 255);
+    cursor: pointer;
+    opacity: 0.8;
+    transition-duration: 0.3s;
+    transition-property: opacity;
+  }
+
+  .contact-email:hover {
+    opacity: 1;
+  }
+}
