@@ -81,7 +81,6 @@ Here are some screenshots of the ShadowHash platform:
 ![Image](https://github.com/user-attachments/assets/6b6661bb-521c-4ec2-b8cc-f6b5ce9d1638)
 ![Image](https://github.com/user-attachments/assets/c7d37581-46cd-46da-bd12-e5aeff570752)
 ![Image](https://github.com/user-attachments/assets/b999f84c-6d43-4577-bdd5-30fd6714c32a)
-![Image](https://github.com/user-attachments/assets/ffe68ef9-ee72-4f8b-b7c7-7cd2ae2e251c)
 <br><br>
 
 ### **Terms of Use**
