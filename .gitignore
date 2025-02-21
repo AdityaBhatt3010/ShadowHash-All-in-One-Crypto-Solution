@@ -1,8 +1,3 @@
-# Ignore HTML, CSS, and JS files inside public folder
-public/**/*.html
-public/**/*.css
-public/**/*.js
-
 # Node modules and dependencies
 node_modules/
 dist/
