@@ -1,0 +1,4 @@
+# Ignore HTML, CSS, and JS files in the public folder from GitHub language stats
+public/**/*.html linguist-vendored
+public/**/*.css linguist-vendored
+public/**/*.js linguist-vendored
