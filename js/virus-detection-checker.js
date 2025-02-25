@@ -3,7 +3,7 @@ const path = require('path');
 const axios = require('axios');
 const FormData = require('form-data');
 
-const API_KEY = '4e4384731df1a03a46d83945ae7454fec28d5f5d4627d510461c264e1d24b5c9';
+const API_KEY = '****************************************************************';
 const VIRUSTOTAL_API_URL = 'https://www.virustotal.com/vtapi/v2/file/scan';
 
 async function scanFile(filePath) {
