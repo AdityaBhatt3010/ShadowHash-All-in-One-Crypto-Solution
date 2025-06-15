@@ -4,6 +4,9 @@
 ## **Abstract**
 ShadowHash is a comprehensive cryptographic platform designed to enhance data security and integrity. Built using **Java for the backend** and **HTML/CSS for the frontend**, it is **hosted on GitHub and AWS Amplify**. The platform offers cryptographic tools such as **password security, encryption, decryption, hash generation, integrity verification, and threat detection**. It integrates **APIs like VirusTotal, HaveIBeenPwned, and Hackcheck Woventeams** for **breach detection** and **malware scanning**.
 
+## **TLDR**
+ShadowHash is an all-in-one cryptographic security platform offering encryption, password protection, breach detection, hash integrity, and malware scanning—powered by custom algorithms and API integrations.
+
 ## Installation
 
 Clone the repository and navigate to the project directory:
